@@ -37,7 +37,8 @@ api.interceptors.response.use(
 ================================ */
 export const getProducts = (params) => api.get("/products", { params });
 export const createProduct = (payload) => api.post("/products", payload);
-export const updateProduct = (id, payload) => api.put(`/products/${id}`, payload);
+export const updateProduct = (id, payload) =>
+  api.put(`/products/${id}`, payload);
 export const deleteProduct = (id) => api.delete(`/products/${id}`);
 
 /* ================================
@@ -45,20 +46,31 @@ export const deleteProduct = (id) => api.delete(`/products/${id}`);
 ================================ */
 export const getClientes = () => api.get("/api/users");
 export const createCliente = (payload) => api.post("/auth/register", payload);
-// Aún falta confirmar si hay endpoints oficiales de update/delete para clientes (Users)
+// ⚠️ Falta confirmar si el backend expone update/delete para clientes (users)
 
 /* ================================
    INGRESOS (Incomes)
 ================================ */
 export const getIncomes = () => api.get("/incomes");
 export const createIncome = (payload) => api.post("/incomes", payload);
-// Si el backend soporta update/delete de incomes, se podrían añadir aquí
+// Opcional: update/delete si tu backend lo soporta
+// export const updateIncome = (id, payload) => api.put(`/incomes/${id}`, payload);
+// export const deleteIncome = (id) => api.delete(`/incomes/${id}`);
 
 /* ================================
    GASTOS (Expenses)
 ================================ */
 export const getExpenses = () => api.get("/expenses");
 export const createExpense = (payload) => api.post("/expenses", payload);
-// Igual, se pueden añadir update/delete si el backend lo expone
+// export const updateExpense = (id, payload) => api.put(`/expenses/${id}`, payload);
+// export const deleteExpense = (id) => api.delete(`/expenses/${id}`);
+
+/* ================================
+   INVERSIONES (Investments)
+================================ */
+export const getInvestments = () => api.get("/investments");
+export const createInvestment = (payload) => api.post("/investments", payload);
+// export const updateInvestment = (id, payload) => api.put(`/investments/${id}`, payload);
+// export const deleteInvestment = (id) => api.delete(`/investments/${id}`);
 
 export default api;

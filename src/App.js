@@ -5,6 +5,7 @@ import Clasificacion from "./pages/Clasificacion";
 import Facturacion from "./pages/Facturacion";
 import Inventario from "./pages/Inventario";
 import Clientes from "./pages/Clientes";
+import Reportes from "./pages/Reportes";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/facturacion" element={<Facturacion />} />
             <Route path="/inventario" element={<Inventario />} />
             <Route path="/clientes" element={<Clientes />} />
+            <Route path="/Reportes" element={<Reportes />} />
               
             {/* Ruta 404 */}
             <Route path="*" element={<h2>Página no encontrada</h2>} />
